@@ -1,0 +1,10 @@
+<a ng-href="{{obtenerWikipediaLink(banda.name)}}"><h2>{{banda.name}}</h2></a>
+<h3>Miembros</h3>
+<div class="row">
+<div class="col-md-3" ng-repeat="miembro in banda.members">
+
+    <p>{{miembro.name}}</p>
+    <img class="instruments" ng-src="{{recuperarIconoInstrumento(instrument)}}" ng-repeat="instrument in miembro.instruments"/>
+
+</div>
+</div>

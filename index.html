@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="jeviteca">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Jeviteca</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-route.min.js"></script>
+    <script src="vendor/angular-route-segment.min.js"></script>
+    <script src="vendor/angular-locale_es-es.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/AlbumesController.js"></script>
+    <script src="scripts/controllers/BandasController.js"></script>
+    <script src="scripts/controllers/GenerosController.js"></script>
+    <script src="scripts/controllers/NavegacionController.js"></script>
+    <script src="scripts/services/JSONProvider.js"></script>
+    <script src="scripts/directives/Album.js"></script>
+    <script src="scripts/directives/Banda.js"></script>
+    <script src="scripts/directives/Genero.js"></script>
+    <script src="scripts/controllers/DetalleAlbumController.js"></script>
+    <script src="scripts/services/DetalleAlbumProvider.js"></script>
+    <script src="scripts/controllers/DetalleBandaController.js"></script>
+    <script src="scripts/services/DetalleBandaProvider.js"></script>
+    <script src="scripts/directives/Favorito.js"></script>
+    <script src="scripts/services/FavoritoService.js"></script>
+    <script src="bower_components/ngDialog/js/ngDialog.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Jeviteca</h1>
+            <h2>Tu rincón del heavy</h2>
+        </header>
+
+        <nav ng-controller="NavegacionController">
+            <ul class="nav nav-tabs">
+                <li role="presentation" ng-class="{ 'active': rutaEsAlbum() }" class="active"><a href="#/albumes">Álbumes</a></li>
+                <li role="presentation" ng-class="{ 'active': rutaEsBanda() }"><a href="#/bandas">Bandas</a></li>
+                <li role="presentation" ng-class="{ 'active': rutaEsGenero() }"><a href="#/generos">Géneros</a></li>
+
+            </ul>
+        </nav>
+        <section app-view-segment="0"></section>
+
+    </div>
+
+</body>
+</html>

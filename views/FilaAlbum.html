@@ -1,0 +1,15 @@
+<tr>
+    <td>
+        <img id="icons" src="data/img/{{album.image}}" alt="imagen" class="img-responsive"/>
+    </td>
+    <td><a ng-href="#/albumes/{{::album.id}}/detalle">{{ ::album.title}}</a>
+    </td>
+    <td>{{ ::album.genre.name }}
+    </td>
+    <td>{{ ::album.year }}
+    </td>
+    <td>
+        <span favorito id-album="album.id"></span>
+    </td>
+
+</tr>

@@ -1,0 +1,13 @@
+<tr>
+    <td><a ng-href="#/bandas/{{::banda.name}}/detalle">{{ ::banda.name}}</a>
+    </td>
+    <td>{{ ::banda.origin }}
+    </td>
+    <td>
+        <ul>
+            <li ng-repeat="miembro in banda.members">
+                {{ miembro.name}}
+            </li>
+        </ul>
+    </td>
+</tr>
